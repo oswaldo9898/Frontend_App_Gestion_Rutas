@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/login" color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Crear cuenta</h1>
+  </div>
+
+  <form id="form">
+    <ion-item lines="full">
+      <ion-label position="floating">Nombres</ion-label>
+      <ion-input type="text" #nombres required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" #apellidos required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Parentesco</ion-label>
+      <ion-input type="text" #parentesco required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" shape="round" type="submit">Registrarse</ion-button>
+  </form>
+
+  <p>Al presionar en 'Registrarse' usted acepta <br/>nuestros terminos y condiciones.</p>
+
+</ion-content>
