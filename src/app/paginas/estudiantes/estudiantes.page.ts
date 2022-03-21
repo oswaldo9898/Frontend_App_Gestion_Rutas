@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { UtilityProviderService } from 'src/app/servicios/utility-provider.service';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.page.html',
-  styleUrls: ['./inicio.page.scss'],
+  selector: 'app-estudiantes',
+  templateUrl: './estudiantes.page.html',
+  styleUrls: ['./estudiantes.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class EstudiantesPage implements OnInit {
 
   constructor(
     private utility: UtilityProviderService,

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar Autobus</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Salir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Registrar Autobus</h1>
+  </div>
+  <form id="form" #registroForm="ngForm" (ngSubmit)= "registro_autobus(registroForm)">
+    <ion-item lines="full">
+      <ion-label position="floating">Marca del vehículo</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="autobus.marca" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Modelo del vehículo</ion-label>
+      <ion-input type="text" name="modelo" [(ngModel)]="autobus.modelo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Placa del vehículo</ion-label>
+      <ion-input type="text" name="placa" [(ngModel)]="autobus.placa" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <div>	
+        <label for="">Foto</label>
+        <div class="custom-file">
+          <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
+          <label class="custom-file-label" id="input-portada" for="file-input" style="white-space:nowrap;overflow:hidden">Seleccionar imagen</label>
+        </div>
+    </div>
+    </ion-item>
+    <ion-item lines="full">
+      <div>
+        <img [src]="this.imgSelect" class="img-thumbnail" alt="Rounded image">
+      </div>
+    </ion-item>
+    
+    
+    <ion-button expand="block" shape="round" type="submit">Guardar vehículo</ion-button>
+  </form>
+  <p [routerLink]="['/lista-autobus']">Regresar</p>
+</ion-content>

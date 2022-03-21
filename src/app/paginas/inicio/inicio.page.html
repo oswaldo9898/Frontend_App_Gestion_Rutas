@@ -1,11 +1,32 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="logout()">Salir</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content >
+  <div class="contenido">
+    <div class="card">
+      <ion-img src="assets/logo.jpg"></ion-img>
+      <div class="card-content">
+        <ion-buttons>
+          <ion-button>Ver Rutas</ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+    <div class="card">
+      <ion-img src="assets/logo.jpg"></ion-img>
+      <div class="card-content">
+        <ion-buttons>
+          <ion-button>crear Ruta</ion-button>
+        </ion-buttons>
+      </div>
+    </div> 
+  </div>
 </ion-content>

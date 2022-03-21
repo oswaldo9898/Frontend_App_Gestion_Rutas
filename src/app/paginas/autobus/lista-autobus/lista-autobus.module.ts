@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { ListaAutobusPageRoutingModule } from './lista-autobus-routing.module';
 
-import { InicioPage } from './inicio.page';
+import { ListaAutobusPage } from './lista-autobus.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
+    ListaAutobusPageRoutingModule
   ],
-  declarations: [InicioPage]
+  declarations: [ListaAutobusPage]
 })
-export class InicioPageModule {}
+export class ListaAutobusPageModule {}

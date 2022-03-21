@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 @Injectable({
@@ -8,6 +9,7 @@ export class UtilityProviderService {
   constructor(
     private toast: ToastController,
     private alert: AlertController,
+    private router: Router
     ) {}
 
   async showToast(header?: string,message?: string, overrideOptions?: any): Promise<HTMLIonToastElement> {
@@ -24,5 +26,10 @@ export class UtilityProviderService {
       buttons:[buttons]
     });
     return result;
+  }
+
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 }
