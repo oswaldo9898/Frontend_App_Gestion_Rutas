@@ -26,4 +26,9 @@ export class AutobusesService {
     fd.append('foto',file);
     return this.http.post(environment.apiURL+"/registro_autobus", fd, {headers:headers})
   }
+
+  eliminar_autobus(placa):Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.delete(environment.apiURL+"/eliminar_autobus/"+placa, {headers:headers});
+  }
 }

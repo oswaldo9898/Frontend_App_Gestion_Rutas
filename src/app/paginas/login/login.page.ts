@@ -42,11 +42,8 @@ export class LoginPage implements OnInit {
             }).then(toast =>{
               toast.present();
             });
-
             localStorage.setItem('token',response.token);
             localStorage.setItem('usuario',JSON.stringify(response.data));
-            console.log(response.data);
-
             loginForm.reset();
             this.router.navigate(['/inicio']);
           }

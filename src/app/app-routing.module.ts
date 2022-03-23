@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'estudiantes',
-    loadChildren: () => import('./paginas/estudiantes/estudiantes.module').then( m => m.EstudiantesPageModule)
-  },
-  {
     path: 'lista-autobus',
     loadChildren: () => import('./paginas/autobus/lista-autobus/lista-autobus.module').then( m => m.ListaAutobusPageModule)
   },
@@ -34,6 +30,14 @@ const routes: Routes = [
   {
     path: 'editar-autobus',
     loadChildren: () => import('./paginas/autobus/editar-autobus/editar-autobus.module').then( m => m.EditarAutobusPageModule)
+  },
+  {
+    path: 'listar-estudiantes',
+    loadChildren: () => import('./paginas/estudiante/listar-estudiantes/listar-estudiantes.module').then( m => m.ListarEstudiantesPageModule)
+  },
+  {
+    path: 'registrar-estudiante',
+    loadChildren: () => import('./paginas/estudiante/registrar-estudiante/registrar-estudiante.module').then( m => m.RegistrarEstudiantePageModule)
   },
 ];
 
