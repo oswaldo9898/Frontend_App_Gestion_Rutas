@@ -87,4 +87,10 @@ export class RegistrarAutobusPage implements OnInit {
     this.utility.logout();
   }
 
+  regresar(){
+    this.file = undefined;
+    this.autobus = {};
+  }
+
+
 }

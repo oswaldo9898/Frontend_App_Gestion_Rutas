@@ -32,18 +32,14 @@
         <label for="">Foto</label>
         <div class="custom-file">
           <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
-          <label class="custom-file-label" id="input-portada" for="file-input" style="white-space:nowrap;overflow:hidden">Seleccionar imagen</label>
+        </div>
+        <br/>
+        <div>
+          <img [src]="this.imgSelect" id="foto" class="img-thumbnail" alt="Rounded image">
         </div>
     </div>
     </ion-item>
-    <ion-item lines="full">
-      <div>
-        <img [src]="this.imgSelect" class="img-thumbnail" alt="Rounded image">
-      </div>
-    </ion-item>
-    
-    
     <ion-button expand="block" shape="round" type="submit">Guardar Autobus</ion-button>
   </form>
-  <p [routerLink]="['/lista-autobus']">Regresar</p>
+  <p [routerLink]="['/lista-autobus']" (click)="regresar()">Regresar</p>
 </ion-content>

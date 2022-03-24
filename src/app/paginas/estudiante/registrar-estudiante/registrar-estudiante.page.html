@@ -31,11 +31,27 @@
       <ion-label position="floating">Curso del estudiante</ion-label>
       <ion-input type="text" name="curso" [(ngModel)]="estudiante.curso" required></ion-input>
     </ion-item>
+    <ion-item (click)="addDirection()" lines="full">
+      <ion-label class="normal" slot="start">
+         Ubicación
+      </ion-label>
+      <ion-buttons slot="end">        
+        <ion-icon slot="icon-only" color="danger" name="location"></ion-icon>        
+      </ion-buttons>
+    </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Foto del estudiante</ion-label>
-      <ion-input type="text" name="foto" [(ngModel)]="estudiante.foto" required></ion-input>
+      <div>	
+        <label for="">Foto del estudiante</label>
+        <div class="custom-file">
+          <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
+        </div>
+        <br/>
+        <div>
+          <img [src]="this.imgSelect" id="foto" class="img-thumbnail" alt="Rounded image">
+        </div>
+    </div>
     </ion-item>
     <ion-button expand="block" shape="round" type="submit">Guardar Estudiante</ion-button>
   </form>
-  <p [routerLink]="['/lista-autobus']">Regresar</p>
+  <p [routerLink]="['/listar-estudiantes']" (click)="regresar()">Regresar</p>
 </ion-content>
