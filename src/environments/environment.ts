@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiURL: 'http://192.168.100.84:3000/api',
-  ApiKeyGoogleMaps: 'AIzaSyAxve1lmtyJ4593gu8BwD79SoI0-s4YQB4'
+  ApiKeyGoogleMaps: 'Secret'
 };
 
 /*
